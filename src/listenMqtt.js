@@ -143,7 +143,7 @@ function listenMqtt(defaultFuncs, api, ctx, globalCallback) {
         threadID: utils.formatID((jsonMessage.thread || jsonMessage.sender_fbid).toString())
       };
       (function () { globalCallback(null, typ); })();
-    } else if (topic === "/orca_presence") {
+    }/* else if (topic === "/orca_presence") {
       if (!ctx.globalOptions.updatePresence) {
         for (var i in jsonMessage.list) {
           var data = jsonMessage.list[i];
@@ -159,7 +159,7 @@ function listenMqtt(defaultFuncs, api, ctx, globalCallback) {
           (function () { globalCallback(null, presence); })();
         }
       }
-    }
+    }*/
 
   });
 
