@@ -151,7 +151,7 @@ function listenMqtt(defaultFuncs, api, ctx, globalCallback) {
 
           var presence = {
             type: "presence",
-            userID: userID.toString() || null,
+            //userID: userID.toString() || null,
             //Convert to ms
             timestamp: data["l"] * 1000,
             statuses: data["p"]
